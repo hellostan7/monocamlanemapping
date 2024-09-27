@@ -1,0 +1,440 @@
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+pose ori xyz: (0.5, 0.5, 0.5)

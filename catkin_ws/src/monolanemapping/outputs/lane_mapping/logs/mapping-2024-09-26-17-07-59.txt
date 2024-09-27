@@ -1,0 +1,120 @@
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb907678bb0>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb907744970>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb9075d23d0>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb9075fa2e0>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb9075a3160>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb90766c5b0>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb90755a3a0>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb907581190>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb9075fec10>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb9076663d0>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb9075751f0>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb8f4022fa0>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb9075fe340>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb9075771f0>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb9075f1fa0>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb8d7fc0d90>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb9075d4610>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb90755abe0>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb8f403bd90>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb8d7fe9be0>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb907646f70>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb90757cdf0>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb9075eab20>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7fb8d7f939d0>

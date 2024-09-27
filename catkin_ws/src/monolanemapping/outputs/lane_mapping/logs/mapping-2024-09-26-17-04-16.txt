@@ -1,0 +1,217 @@
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d69e7be0>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d69cb490>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d696f2b0>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d6918250>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d693f0d0>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d693b4c0>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d6977310>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d6936100>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68c4394eb0>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d6913160>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d68f7160>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d6979f10>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68c43bdd00>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d69868e0>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d69196d0>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d694ad00>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68c4367af0>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d6918e80>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68c4397280>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d691cb50>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d68fcd60>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d698fac0>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d68c8b50>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d69869a0>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d6996d00>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d68fcfa0>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d6929940>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d68f1400>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68c4397490>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68d69303d0>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f68c42e3730>
+[2.51799103e-16 6.18198052e+00 1.44977908e-18]
+<class 'numpy.ndarray'>
