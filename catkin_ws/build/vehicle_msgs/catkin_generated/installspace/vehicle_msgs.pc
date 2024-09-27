@@ -1,8 +1,0 @@
-prefix=/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/install
-
-Name: vehicle_msgs
-Description: Description of vehicle_msgs
-Version: 0.0.0
-Cflags: -I${prefix}/include -I/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src/common/inc -I/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src/common/thirdparty -I/usr/include -I/usr/include/eigen3 -I/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src/common/thirdparty/ooqp/include/ooqp -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp
-Libs: -L${prefix}/lib -lhkust_pl_common
-Requires: message_runtime

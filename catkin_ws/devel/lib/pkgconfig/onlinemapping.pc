@@ -1,8 +1,0 @@
-prefix=/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/devel
-
-Name: onlinemapping
-Description: Description of onlinemapping
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
