@@ -23,6 +23,7 @@ from vehicle_msgs.msg import Lane
 from rospy import Time
 import geometry_msgs
 from visualization_msgs.msg import MarkerArray, Marker
+from geometry_msgs.msg import Point
 
 def monolanmapping_main(input, bag_file):
 
@@ -238,23 +239,14 @@ class OnlineLaneMappingNode:
         # print(output)
         # print(output[].shape)
         # print(output.ndim)
-        for point in output[0]:
-            # print(point[1])
-            # print(type(point[1]))
+        for output_single in output:
             marker = Marker()
             marker.header.frame_id = "map"
             marker.header.stamp = rospy.Time.now()
-            marker.ns = "my_namespace"
+            marker.ns = "line_namespace"
             marker.id = id
-            marker.type = Marker.CUBE
+            marker.type = Marker.LINE_STRIP
             marker.action = Marker.ADD
-            marker.pose.position.x = float(point[1])
-            marker.pose.position.y = float(point[0])
-            marker.pose.position.z = float(point[2])
-            marker.pose.orientation.x = 0.0
-            marker.pose.orientation.y = 0.0
-            marker.pose.orientation.z = 0.0
-            marker.pose.orientation.w = 1.0
             marker.scale.x = 0.5
             marker.scale.y = 0.5
             marker.scale.z = 0.5
@@ -262,6 +254,20 @@ class OnlineLaneMappingNode:
             marker.color.r = 1.0  # Red
             marker.color.g = 0.0  # Green
             marker.color.b = 0.0  # Blue
+            for point in output_single:
+                # print(point[1])
+                # print(type(point[1]))
+
+                # marker.pose.position.x = float(point[1])
+                # marker.pose.position.y = float(point[2])
+                # marker.pose.position.z = float(point[0])
+                # marker.pose.orientation.x = 0.0
+                # marker.pose.orientation.y = 0.0
+                # marker.pose.orientation.z = 0.0
+                # marker.pose.orientation.w = 1.0
+                p = Point(float(point[1]), float(point[2]),float(point[0]))
+                marker.points.append(p)
+
             id = id + 1
 
             marker_array.markers.append(marker)
