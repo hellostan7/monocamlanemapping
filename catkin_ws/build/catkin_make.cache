@@ -1,2 +1,2 @@
-common:monolanemapping:openlane_bag:vehicle_msgs:wrapper_online_mapping
--DCATKIN_DEVEL_PREFIX=/home/minghao.zhu/Documents/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/minghao.zhu/Documents/catkin_ws/install -G Unix Makefiles
+common:monolanemapping:vehicle_msgs:wrapper_online_mapping
+-DCATKIN_DEVEL_PREFIX=/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/install -G Unix Makefiles

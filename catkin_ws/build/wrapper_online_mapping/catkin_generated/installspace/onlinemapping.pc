@@ -1,4 +1,4 @@
-prefix=/home/minghao.zhu/Documents/catkin_ws/install
+prefix=/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/install
 
 Name: onlinemapping
 Description: Description of onlinemapping

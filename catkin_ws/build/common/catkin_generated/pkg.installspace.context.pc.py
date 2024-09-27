@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include;/usr/include;/usr/include/e
 PROJECT_CATKIN_DEPENDS = "roscpp;visualization_msgs;sensor_msgs;tf".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lhkust_pl_common".split(';') if "-lhkust_pl_common" != "" else []
 PROJECT_NAME = "common"
-PROJECT_SPACE_DIR = "/home/minghao.zhu/Documents/catkin_ws/install"
+PROJECT_SPACE_DIR = "/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/install"
 PROJECT_VERSION = "0.0.0"

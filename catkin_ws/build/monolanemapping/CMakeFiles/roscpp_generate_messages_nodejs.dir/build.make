@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/minghao.zhu/Documents/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/minghao.zhu/Documents/catkin_ws/build
+CMAKE_BINARY_DIR = /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/build
 
 # Utility rule file for roscpp_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ monolanemapping/CMakeFiles/roscpp_generate_messages_nodejs.dir/build: roscpp_gen
 .PHONY : monolanemapping/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 
 monolanemapping/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
-	cd /home/minghao.zhu/Documents/catkin_ws/build/monolanemapping && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/build/monolanemapping && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : monolanemapping/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
 
 monolanemapping/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend:
-	cd /home/minghao.zhu/Documents/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/minghao.zhu/Documents/catkin_ws/src /home/minghao.zhu/Documents/catkin_ws/src/monolanemapping /home/minghao.zhu/Documents/catkin_ws/build /home/minghao.zhu/Documents/catkin_ws/build/monolanemapping /home/minghao.zhu/Documents/catkin_ws/build/monolanemapping/CMakeFiles/roscpp_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src/monolanemapping /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/build /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/build/monolanemapping /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/build/monolanemapping/CMakeFiles/roscpp_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : monolanemapping/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
 

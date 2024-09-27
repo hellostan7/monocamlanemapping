@@ -1,8 +1,8 @@
-# Install script for directory: /home/minghao.zhu/Documents/catkin_ws/src/common
+# Install script for directory: /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src/common
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/minghao.zhu/Documents/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/minghao.zhu/Documents/catkin_ws/build/common/catkin_generated/installspace/common.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/build/common/catkin_generated/installspace/common.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common/cmake" TYPE FILE FILES
-    "/home/minghao.zhu/Documents/catkin_ws/build/common/catkin_generated/installspace/commonConfig.cmake"
-    "/home/minghao.zhu/Documents/catkin_ws/build/common/catkin_generated/installspace/commonConfig-version.cmake"
+    "/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/build/common/catkin_generated/installspace/commonConfig.cmake"
+    "/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/build/common/catkin_generated/installspace/commonConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common" TYPE FILE FILES "/home/minghao.zhu/Documents/catkin_ws/src/common/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common" TYPE FILE FILES "/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src/common/package.xml")
 endif()
 

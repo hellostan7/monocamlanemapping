@@ -1,8 +1,8 @@
-# Install script for directory: /home/minghao.zhu/Documents/catkin_ws/src/wrapper_online_mapping
+# Install script for directory: /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src/wrapper_online_mapping
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/minghao.zhu/Documents/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/minghao.zhu/Documents/catkin_ws/build/wrapper_online_mapping/catkin_generated/installspace/onlinemapping.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/build/wrapper_online_mapping/catkin_generated/installspace/onlinemapping.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/onlinemapping/cmake" TYPE FILE FILES
-    "/home/minghao.zhu/Documents/catkin_ws/build/wrapper_online_mapping/catkin_generated/installspace/onlinemappingConfig.cmake"
-    "/home/minghao.zhu/Documents/catkin_ws/build/wrapper_online_mapping/catkin_generated/installspace/onlinemappingConfig-version.cmake"
+    "/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/build/wrapper_online_mapping/catkin_generated/installspace/onlinemappingConfig.cmake"
+    "/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/build/wrapper_online_mapping/catkin_generated/installspace/onlinemappingConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/onlinemapping" TYPE FILE FILES "/home/minghao.zhu/Documents/catkin_ws/src/wrapper_online_mapping/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/onlinemapping" TYPE FILE FILES "/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src/wrapper_online_mapping/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/onlinemapping" TYPE PROGRAM FILES "/home/minghao.zhu/Documents/catkin_ws/build/wrapper_online_mapping/catkin_generated/installspace/fake_lane_mapping_input.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/onlinemapping" TYPE PROGRAM FILES "/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/build/wrapper_online_mapping/catkin_generated/installspace/fake_lane_mapping_input.py")
 endif()
 

@@ -67,14 +67,14 @@ set(onlinemapping_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(onlinemapping_SOURCE_PREFIX /home/minghao.zhu/Documents/catkin_ws/src/wrapper_online_mapping)
-  set(onlinemapping_DEVEL_PREFIX /home/minghao.zhu/Documents/catkin_ws/devel)
+  set(onlinemapping_SOURCE_PREFIX /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src/wrapper_online_mapping)
+  set(onlinemapping_DEVEL_PREFIX /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/devel)
   set(onlinemapping_INSTALL_PREFIX "")
   set(onlinemapping_PREFIX ${onlinemapping_DEVEL_PREFIX})
 else()
   set(onlinemapping_SOURCE_PREFIX "")
   set(onlinemapping_DEVEL_PREFIX "")
-  set(onlinemapping_INSTALL_PREFIX /home/minghao.zhu/Documents/catkin_ws/install)
+  set(onlinemapping_INSTALL_PREFIX /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/install)
   set(onlinemapping_PREFIX ${onlinemapping_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/minghao.zhu/Documents/catkin_ws/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/install/lib;/home/minghao.zhu/Documents/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

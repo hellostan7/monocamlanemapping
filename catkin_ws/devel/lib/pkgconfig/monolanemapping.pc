@@ -1,4 +1,4 @@
-prefix=/home/minghao.zhu/Documents/catkin_ws/devel
+prefix=/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/devel
 
 Name: monolanemapping
 Description: Description of monolanemapping

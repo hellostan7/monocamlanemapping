@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/minghao.zhu/Documents/catkin_ws/devel/lib/libhkust_pl_common.pdb"
-  "/home/minghao.zhu/Documents/catkin_ws/devel/lib/libhkust_pl_common.so"
+  "/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/devel/lib/libhkust_pl_common.pdb"
+  "/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/devel/lib/libhkust_pl_common.so"
   "CMakeFiles/hkust_pl_common.dir/src/common/basics/colormap.cc.o"
   "CMakeFiles/hkust_pl_common.dir/src/common/basics/semantics.cc.o"
   "CMakeFiles/hkust_pl_common.dir/src/common/basics/shapes.cc.o"

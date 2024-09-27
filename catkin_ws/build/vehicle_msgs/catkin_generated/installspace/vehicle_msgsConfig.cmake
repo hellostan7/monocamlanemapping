@@ -67,14 +67,14 @@ set(vehicle_msgs_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(vehicle_msgs_SOURCE_PREFIX /home/minghao.zhu/Documents/catkin_ws/src/vehicle_msgs)
-  set(vehicle_msgs_DEVEL_PREFIX /home/minghao.zhu/Documents/catkin_ws/devel)
+  set(vehicle_msgs_SOURCE_PREFIX /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src/vehicle_msgs)
+  set(vehicle_msgs_DEVEL_PREFIX /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/devel)
   set(vehicle_msgs_INSTALL_PREFIX "")
   set(vehicle_msgs_PREFIX ${vehicle_msgs_DEVEL_PREFIX})
 else()
   set(vehicle_msgs_SOURCE_PREFIX "")
   set(vehicle_msgs_DEVEL_PREFIX "")
-  set(vehicle_msgs_INSTALL_PREFIX /home/minghao.zhu/Documents/catkin_ws/install)
+  set(vehicle_msgs_INSTALL_PREFIX /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/install)
   set(vehicle_msgs_PREFIX ${vehicle_msgs_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(vehicle_msgs_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "include;/home/minghao.zhu/Documents/catkin_ws/src/common/inc;/home/minghao.zhu/Documents/catkin_ws/src/common/thirdparty;/usr/include;/usr/include/eigen3;/home/minghao.zhu/Documents/catkin_ws/src/common/thirdparty/ooqp/include/ooqp;/opt/ros/noetic/include;/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp " STREQUAL " ")
+if(NOT "include;/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src/common/inc;/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src/common/thirdparty;/usr/include;/usr/include/eigen3;/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src/common/thirdparty/ooqp/include/ooqp;/opt/ros/noetic/include;/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp " STREQUAL " ")
   set(vehicle_msgs_INCLUDE_DIRS "")
-  set(_include_dirs "include;/home/minghao.zhu/Documents/catkin_ws/src/common/inc;/home/minghao.zhu/Documents/catkin_ws/src/common/thirdparty;/usr/include;/usr/include/eigen3;/home/minghao.zhu/Documents/catkin_ws/src/common/thirdparty/ooqp/include/ooqp;/opt/ros/noetic/include;/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp")
+  set(_include_dirs "include;/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src/common/inc;/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src/common/thirdparty;/usr/include;/usr/include/eigen3;/home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/src/common/thirdparty/ooqp/include/ooqp;/opt/ros/noetic/include;/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/minghao.zhu/Documents/catkin_ws/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/minghao.zhu/Documents/github/monocamlanemapping/catkin_ws/install/lib;/home/minghao.zhu/Documents/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
