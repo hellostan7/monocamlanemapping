@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 # license removed for brevity
+import os
+import sys
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
+sys.path.append(ROOT_DIR)
+from lane_slam.system.lane_mapping import LaneMapping
+
 import rospy
+from vehicle_msgs.msg import Vehicle
 from vehicle_msgs.msg import ArenaInfoStatic
 from vehicle_msgs.msg import LaneNet
 from vehicle_msgs.msg import Lane
@@ -10,10 +17,11 @@ from rospy import Time
 
 class FakeOnlineLaneMappingInput:
     def __init__(self):
-        self.pub = rospy.Publisher('arena_info_static', ArenaInfoStatic, queue_size=10)
+        self.pub1 = rospy.Publisher('arena_info_static', ArenaInfoStatic, queue_size=10)
+        self.pub2 = rospy.Publisher('ego_vehicle_info', Vehicle, queue_size=10)
         self.rate = rospy.Rate(10)  # 10 Hz
 
-    def publish_arena_info_static(self):
+    def run(self):
         # 创建并发布静态场地信息消息
         arena_info_static = ArenaInfoStatic()
         arena_info_static.header.frame_id = "XXX";
@@ -56,12 +64,16 @@ class FakeOnlineLaneMappingInput:
 
         arena_info_static.lane_net.lanes.append(lane)
 
-
+        VehicleInfo = Vehicle()
+        VehicleInfo.header.frame_id = "XXX";
+        VehicleInfo.header.stamp = Time.now();
+            
         while not rospy.is_shutdown():
-            self.pub.publish(arena_info_static)
-            # self.rate.sleep()
+            self.pub1.publish(arena_info_static)
+            self.pub2.publish(VehicleInfo)
+        
 
 if __name__ == '__main__':
     rospy.init_node('FakeOnlineLaneMappingInput')
     fake_online_mapping_input = FakeOnlineLaneMappingInput()
-    fake_online_mapping_input.publish_arena_info_static()
+    fake_online_mapping_input.run()

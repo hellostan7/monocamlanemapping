@@ -1,0 +1,888 @@
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+<lane_slam.lane_feature.LaneFeature object at 0x7f6345aafa30>
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+[INFO] [1728378541.184499]: Callback for /ego_vehicle_info triggered
+0.0
+<lane_slam.lane_feature.LaneFeature object at 0x7f6345a84340>
+[INFO] [1728378541.195597]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.198026]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.199529]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.200815]: Callback for /ego_vehicle_info triggered
+0.0lanes_predict
+
+lanes_gt
+gt_pose_wc
+Enter
+[INFO] [1728378541.203183]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.205708]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.207579]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.209283]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.210898]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.211900]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.212735]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.214038]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.216077]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.227016]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.228478]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.235141]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.237031]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.242455]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.243865]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.244947]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.248079]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.251310]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.253092]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.253956]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.257867]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.262007]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.268767]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.271109]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.274600]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.279260]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.283186]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.284769]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.288872]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.292826]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.299894]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.305936]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.311285]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.322572]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.325668]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.329434]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.332127]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.335297]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.337322]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.341508]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.343061]: Callback for /ego_vehicle_info triggered
+<lane_slam.lane_feature.LaneFeature object at 0x7f6345a12b80>
+0.0
+[INFO] [1728378541.345433]: Callback for /ego_vehicle_info triggered
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+0.0
+[INFO] [1728378541.353846]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.359035]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.362550]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.366196]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.367976]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.369663]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.371592]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.372728]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.374469]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.375455]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.376872]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.378964]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.384400]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.387306]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.388813]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.390236]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.391463]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.394943]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.396831]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.399266]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.401450]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.403560]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.405102]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.406796]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.409881]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.415832]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.422081]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.424325]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.425852]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.428298]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.429889]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.431695]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.436530]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.437685]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.439269]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.444027]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.448339]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.450264]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.451787]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.453033]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.454629]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.456048]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.457315]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.458592]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.459479]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.460871]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.462490]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.465532]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.468219]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.470243]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.477358]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.483796]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.490680]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.493838]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.498131]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.502553]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.505430]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.507905]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.510588]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.513573]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.518052]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.522196]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.524455]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.526576]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.527633]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.537034]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.540403]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.546127]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.548926]: Callback for /ego_vehicle_info triggered
+<lane_slam.lane_feature.LaneFeature object at 0x7f634598f7f0>
+0.0
+[INFO] [1728378541.554285]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.555964]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.557100]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.558489]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.560572]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.562065]: Callback for /ego_vehicle_info triggered
+lanes_predict
+lanes_gt
+gt_pose_wc
+Enter
+0.0
+[INFO] [1728378541.568448]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.570941]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.572421]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.576286]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.578437]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.579453]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.581017]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.583218]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.584819]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.585744]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.587090]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.587834]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.588543]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.590336]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.591769]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.592559]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.593562]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.602906]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.606878]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.608547]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.609582]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.610585]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.614410]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.616711]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.619270]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.620499]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.621498]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.622712]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.624025]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.625060]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.626989]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.628352]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.630693]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.632840]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.634846]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.635829]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.636874]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.637654]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.638433]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.639160]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.640238]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.640974]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.642023]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.643211]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.643948]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.645109]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.645961]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.646846]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.647885]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.649188]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.650829]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.651852]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.653135]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.654794]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.657578]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.660026]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.661608]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.664229]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.666291]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.667600]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.668468]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.669693]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.671653]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.672979]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.674901]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.675874]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.678284]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.679953]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.681698]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.683116]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.684212]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.685989]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.689033]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.690207]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.691082]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.692183]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.692902]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.693895]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.695314]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.696211]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.697303]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.698306]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.699546]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.701437]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.702652]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.705086]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.706447]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.708541]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.710669]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.711734]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.712978]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.716816]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.719319]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.721022]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.725172]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.734356]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.742217]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.744695]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.751842]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.754870]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.761101]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.762753]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.764035]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.767278]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.769667]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.772089]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.773862]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.776141]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.777080]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.782027]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.785191]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.787452]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.790080]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.791395]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.793073]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.795152]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.796037]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.799232]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.801958]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.803176]: Callback for /ego_vehicle_info triggered
+0.0<lane_slam.lane_feature.LaneFeature object at 0x7f633444f910>
+
+[INFO] [1728378541.804546]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.806537]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.807500]: Callback for /ego_vehicle_info triggered
+0.0lanes_predict
+
+lanes_gt
+gt_pose_wc
+Enter
+[INFO] [1728378541.810616]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.816008]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.824746]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.826240]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.830461]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.832111]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.833178]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.835088]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.836991]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.838065]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.839642]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.840932]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.846135]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.848365]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.850022]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.851692]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.854024]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.855085]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.858680]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.861676]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.863835]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.865566]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.867522]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.868864]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.870171]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.871275]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.872669]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.874446]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.876979]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.879061]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.880620]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.883657]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.885072]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.886190]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.887351]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.889181]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.890913]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.892710]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.894865]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.898641]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.900636]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.908219]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.910918]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.915120]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.918374]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.920174]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.924597]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.926063]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.930003]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.932961]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.936728]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.940153]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.943921]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.954144]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.956738]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.958542]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.959942]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.961825]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.964202]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.966341]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.969350]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.972104]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.972983]: Callback for /ego_vehicle_info triggered
+<lane_slam.lane_feature.LaneFeature object at 0x7f6345a1a100>0.0
+
+[INFO] [1728378541.974731]: Callback for /ego_vehicle_info triggered
+lanes_predict0.0
+lanes_gt
+gt_pose_wc
+Enter
+
+[INFO] [1728378541.980248]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.984124]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.985377]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.986777]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.988590]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.990768]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.991956]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.993063]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.994591]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378541.995649]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.000468]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.002735]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.004144]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.005969]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.007522]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.009395]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.011197]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.012994]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.015131]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.018262]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.020416]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.021895]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.023746]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.026878]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.033159]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.034919]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.037708]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.040448]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.041767]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.043505]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.044972]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.048956]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.051508]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.052783]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.053956]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.054899]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.056787]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.059645]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.064372]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.065999]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.067687]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.069395]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.070872]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.072137]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.073529]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.075491]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.078744]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.080409]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.081885]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.084957]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.085881]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.087542]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.088622]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.090653]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.092913]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.094153]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.096491]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.098465]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.099894]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.101116]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.102104]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.104088]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.105297]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.106681]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.107852]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.109035]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.109863]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.110808]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.111921]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.113902]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.115686]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.117830]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.119426]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.129741]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.134052]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.136561]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.140074]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.141688]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.145376]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.149631]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.153661]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.156233]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.161294]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.165806]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.169450]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.176805]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.179660]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.184657]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.186525]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.190339]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.194033]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.200508]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.201995]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.204109]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.205292]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.208214]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.210216]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.211075]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.212033]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.216416]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.218806]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.220414]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.221433]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.222302]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.224985]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.227128]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.229152]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.232403]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.235337]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.236290]: Callback for /ego_vehicle_info triggered
+<lane_slam.lane_feature.LaneFeature object at 0x7f6345a25bb0>
+0.0
+[INFO] [1728378542.237859]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.238802]: Callback for /ego_vehicle_info triggered
+0.0
+[INFO] [1728378542.240145]: Callback for /ego_vehicle_info triggered
+0.0lanes_predict
+
+lanes_gt
+gt_pose_wc[INFO] [1728378542.243471]: Callback for /ego_vehicle_info triggered
+
+Enter
+0.0
+[INFO] [1728378542.252666]: Callback for /ego_vehicle_info triggered
+0.0
+<lane_slam.lane_feature.LaneFeature object at 0x7f63459cfa60>

@@ -17,6 +17,7 @@ from misc.config import define_args
 from misc.config import cfg, cfg_from_yaml_file
 
 import rospy
+from vehicle_msgs.msg import Vehicle
 from vehicle_msgs.msg import ArenaInfoStatic
 from vehicle_msgs.msg import LaneNet
 from vehicle_msgs.msg import Lane
@@ -188,6 +189,13 @@ class inputvehicle:
 
 class OnlineLaneMappingNode:
     def __init__(self):
+        self.vehicleinfo_x = 0.0
+        self.vehicleinfo_y = 0.0
+        self.vehicleinfo_z = 0.0
+        self.vehicleinfo_a = 0.0
+        self.vehicleinfo_b = 0.0
+        self.vehicleinfo_c = 0.0
+        self.vehicleinfo_d = 0.0
         # 初始化节点
         rospy.init_node('online_lane_mapping_node', anonymous=True)
 
@@ -195,9 +203,10 @@ class OnlineLaneMappingNode:
         self.publisher = rospy.Publisher('/markerarray_onlinelanemapping', MarkerArray, queue_size=10)
 
         # 创建订阅者
-        self.subscriber = rospy.Subscriber('/arena_info_static', ArenaInfoStatic, self.callback)
+        self.subscriber1 = rospy.Subscriber('/ego_vehicle_info', Vehicle, self.callback_DecodeEgoVehicleInfo)
+        self.subscriber2 = rospy.Subscriber('/arena_info_static', ArenaInfoStatic, self.callback_DecodeArenaInfo)
 
-    def callback(self, msg):
+    def callback_DecodeArenaInfo(self, msg):
         # 打印 lanes 的数量
         # lanes_count = len(msg.lane_net.lanes)
         # rospy.loginfo(f"Number of lanes: {lanes_count}")
@@ -275,6 +284,12 @@ class OnlineLaneMappingNode:
         # 发布修改后的消息
         self.publisher.publish(marker_array)
 
+    def callback_DecodeEgoVehicleInfo(self, msg):
+        # rospy.loginfo("Callback for /ego_vehicle_info triggered")
+        vehicleinfo_x = msg.state.vec_position.x
+        vehicleinfo_y = msg.state.vec_position.y
+        
+    
     def run(self):
         rospy.spin()  # 保持节点运行
 
