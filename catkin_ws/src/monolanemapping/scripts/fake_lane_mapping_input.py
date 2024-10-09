@@ -2,12 +2,12 @@
 # license removed for brevity
 import os
 import sys
+import rospy
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
 sys.path.append(ROOT_DIR)
-from lane_slam.system.lane_mapping import LaneMapping
-
-import rospy
-from vehicle_msgs.msg import Vehicle
+msg_workspace_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../", "devel/lib/python3/dist-packages/"))
+sys.path.append(msg_workspace_path)
+from derived_object_msgs.msg import ObjectArray, Object
 from vehicle_msgs.msg import ArenaInfoStatic
 from vehicle_msgs.msg import LaneNet
 from vehicle_msgs.msg import Lane
@@ -18,7 +18,7 @@ from rospy import Time
 class FakeOnlineLaneMappingInput:
     def __init__(self):
         self.pub1 = rospy.Publisher('arena_info_static', ArenaInfoStatic, queue_size=10)
-        self.pub2 = rospy.Publisher('ego_vehicle_info', Vehicle, queue_size=10)
+        self.pub2 = rospy.Publisher('/carla/objects', ObjectArray, queue_size=10)
         self.rate = rospy.Rate(10)  # 10 Hz
 
     def run(self):
@@ -64,13 +64,26 @@ class FakeOnlineLaneMappingInput:
 
         arena_info_static.lane_net.lanes.append(lane)
 
-        VehicleInfo = Vehicle()
-        VehicleInfo.header.frame_id = "XXX";
-        VehicleInfo.header.stamp = Time.now();
+        Objects_Array = ObjectArray()  # 创建 ObjectArray 实例
+        Objects_Array.header.frame_id = "XXX";
+        Objects_Array.header.stamp = Time.now();
+        Objects_Array.objects = []  # 确保 objects 字段是一个列表
+
+        # 创建一个 Object 实例并设置其位置
+        obj = Object()
+        obj.pose.position.x = 1
+        obj.pose.position.y = 2
+        obj.pose.position.z = 3
+        obj.pose.orientation.x = 0.0
+        obj.pose.orientation.y = 0.0
+        obj.pose.orientation.z = 0.0
+        obj.pose.orientation.w = 1
+        Objects_Array.objects.append(obj)  # 将对象添加到 ObjectArray
+
             
         while not rospy.is_shutdown():
             self.pub1.publish(arena_info_static)
-            self.pub2.publish(VehicleInfo)
+            self.pub2.publish(Objects_Array)
         
 
 if __name__ == '__main__':

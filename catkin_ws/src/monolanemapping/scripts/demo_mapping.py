@@ -17,7 +17,9 @@ from misc.config import define_args
 from misc.config import cfg, cfg_from_yaml_file
 
 import rospy
-from vehicle_msgs.msg import Vehicle
+msg_workspace_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../", "devel/lib/python3/dist-packages/"))
+sys.path.append(msg_workspace_path)
+from derived_object_msgs.msg import ObjectArray
 from vehicle_msgs.msg import ArenaInfoStatic
 from vehicle_msgs.msg import LaneNet
 from vehicle_msgs.msg import Lane
@@ -203,7 +205,7 @@ class OnlineLaneMappingNode:
         self.publisher = rospy.Publisher('/markerarray_onlinelanemapping', MarkerArray, queue_size=10)
 
         # 创建订阅者
-        self.subscriber1 = rospy.Subscriber('/ego_vehicle_info', Vehicle, self.callback_DecodeEgoVehicleInfo)
+        self.subscriber1 = rospy.Subscriber('/carla/objects', ObjectArray, self.callback_DecodeEgoVehicleInfo)
         self.subscriber2 = rospy.Subscriber('/arena_info_static', ArenaInfoStatic, self.callback_DecodeArenaInfo)
 
     def callback_DecodeArenaInfo(self, msg):
@@ -225,9 +227,10 @@ class OnlineLaneMappingNode:
             self.inputlanes.add_lane(lane.points, category=0, track_id=i, attribute=0)
             i += 1
 
-        self.inputlanes.add_header(123, 0)         #????????
-        self.gt_pose_msg.add_header(123, 0)        #???????? 
-        self.gt_pose_msg.add_pose(0, 0, 0, 0.5, 0.5, 0.5, 0.5)                   
+        self.inputlanes.add_header(123, 0)
+        self.gt_pose_msg.add_header(123, 0)
+        self.gt_pose_msg.add_pose(self.vehicleinfo_x, self.vehicleinfo_y, self.vehicleinfo_z, 
+            self.vehicleinfo_a, self.vehicleinfo_b, self.vehicleinfo_c, self.vehicleinfo_d)                   
         
         Lanes_predict = self.inputlanes.get_lanes_predict_msg()
         Gt_pose_wc = self.gt_pose_msg.get_gt_pose_msg()
@@ -285,11 +288,19 @@ class OnlineLaneMappingNode:
         self.publisher.publish(marker_array)
 
     def callback_DecodeEgoVehicleInfo(self, msg):
-        # rospy.loginfo("Callback for /ego_vehicle_info triggered")
-        vehicleinfo_x = msg.state.vec_position.x
-        vehicleinfo_y = msg.state.vec_position.y
-        
-    
+        rospy.loginfo("Callback for /ego_vehicle_info triggered")
+        print("len(msg.objects)", len(msg.objects))
+        print("msg.objects[0].pose.position.x", msg.objects[0].pose.position.x)
+        self.vehicleinfo_x = msg.objects[0].pose.position.x
+        self.vehicleinfo_y = msg.objects[0].pose.position.y
+        self.vehicleinfo_z = msg.objects[0].pose.position.z
+        self.vehicleinfo_a = msg.objects[0].pose.orientation.x
+        self.vehicleinfo_b = msg.objects[0].pose.orientation.y
+        self.vehicleinfo_c = msg.objects[0].pose.orientation.z
+        self.vehicleinfo_d = msg.objects[0].pose.orientation.w
+        print("self.vehicleinfo_x")
+        print(self.vehicleinfo_x)
+
     def run(self):
         rospy.spin()  # 保持节点运行
 

@@ -8,10 +8,12 @@ from openlane_bag.msg import LaneList, Lane, LanePoint
 from geometry_msgs.msg import PoseStamped
 
 def posemsg_to_np(pose_msg):
+    print(f"pose pos xyz: {pose_msg.pose.position.x, pose_msg.pose.position.y, pose_msg.pose.position.z}")
+    print(f"pose ori xyz: {pose_msg.pose.orientation.x, pose_msg.pose.orientation.y, pose_msg.pose.orientation.w}")
     pose = np.eye(4)
     pose[:3, 3] = np.array([pose_msg.pose.position.x, pose_msg.pose.position.y, pose_msg.pose.position.z])
     pose[:3, :3] = R.from_quat([pose_msg.pose.orientation.x, pose_msg.pose.orientation.y, pose_msg.pose.orientation.z, pose_msg.pose.orientation.w]).as_matrix()
-    # print(f"pose ori xyz: {pose_msg.pose.orientation.x, pose_msg.pose.orientation.y, pose_msg.pose.orientation.z}")
+    
     return pose
 
 def lanemsg_to_list(lane_list_msg:LaneList):
