@@ -75,7 +75,7 @@ class LaneMapping(LaneOptimizer):
             ctrl_pts = lane_feature.get_ctrl_xyz()
             ctrl_points.append(np.array(ctrl_pts))
 
-        #print(ctrl_points)
+        # print(ctrl_points)
         return ctrl_points
 
     def lane_nms(self, frame):

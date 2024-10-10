@@ -44,19 +44,6 @@ def prune_3d_lane_by_range(lane_3d, range_area):
     lane_3d = lane_3d[idx, ...]
     return lane_3d
 
-def prune_3d_lane_by_vehiclerange(lane_3d, range_area, car_pose):
-    if len(range_area) == 4:
-        x_min, x_max, y_min, y_max = range_area
-    elif len(range_area) == 2:
-        x_min, x_max = range_area
-        y_min, y_max = 0, 103
-    
-    idx = np.logical_and(lane_3d[:, 0] > (x_min), lane_3d[:, 0] < (x_max))
-    idx = np.logical_and(idx, lane_3d[:, 1] > (y_min))
-    idx = np.logical_and(idx, lane_3d[:, 1] < (y_max))
-    lane_3d = lane_3d[idx, ...]
-    return lane_3d
-
 def vis_lanes_dict(lane_gt, lane_pred, saved_lanes = None):
     lane_gt_list = []
     lane_pred_list = []
