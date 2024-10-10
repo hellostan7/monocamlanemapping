@@ -17,8 +17,8 @@ from misc.config import define_args
 from misc.config import cfg, cfg_from_yaml_file
 
 import rospy
-msg_workspace_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../", "devel/lib/python3/dist-packages/"))
-sys.path.append(msg_workspace_path)
+# msg_workspace_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../", "devel/lib/python3/dist-packages/"))
+# sys.path.append(msg_workspace_path)
 from derived_object_msgs.msg import ObjectArray
 from vehicle_msgs.msg import ArenaInfoStatic
 from vehicle_msgs.msg import LaneNet
@@ -123,10 +123,15 @@ class Inputlanes:
     def __init__(self):
         self.lanes_predict_msg = self.lanes_predict()
 
-    def add_lane(self, points, category, track_id, attribute):
+    def add_lane(self, points, car_posex, car_posey, car_posez, category, track_id, attribute):
         lane = self.Lane(category, track_id, attribute)
         for point in points:
-            x, y ,z, visibility = point.x, point.y, point.z, 1
+            #x, y ,z, visibility = point.x, point.y, point.z, 1
+            x = point.x - car_posex
+            y = point.y - car_posey
+            z = point.z - car_posez
+            visibility = 1
+
             point = self.Point(x, y, z, visibility)
 
             lane.points.append(point)
@@ -224,7 +229,8 @@ class OnlineLaneMappingNode:
         
         i = 0
         for lane in msg.lane_net.lanes:
-            self.inputlanes.add_lane(lane.points, category=0, track_id=i, attribute=0)
+            self.inputlanes.add_lane(lane.points, self.vehicleinfo_x, self.vehicleinfo_y, self.vehicleinfo_z, 
+                category=0, track_id=i, attribute=0)
             i += 1
 
         self.inputlanes.add_header(123, 0)
@@ -277,7 +283,8 @@ class OnlineLaneMappingNode:
                 # marker.pose.orientation.y = 0.0
                 # marker.pose.orientation.z = 0.0
                 # marker.pose.orientation.w = 1.0
-                p = Point(float(point[1]), float(point[2]),float(point[0]))
+                # p = Point(float(point[1]), float(point[2]),float(point[0]))
+                p = Point(float(point[0]), float(point[1]), float(point[2]))
                 marker.points.append(p)
 
             id = id + 1
@@ -288,9 +295,15 @@ class OnlineLaneMappingNode:
         self.publisher.publish(marker_array)
 
     def callback_DecodeEgoVehicleInfo(self, msg):
-        rospy.loginfo("Callback for /ego_vehicle_info triggered")
-        print("len(msg.objects)", len(msg.objects))
-        print("msg.objects[0].pose.position.x", msg.objects[0].pose.position.x)
+        # rospy.loginfo("Callback for /ego_vehicle_info triggered")
+        # print("len(msg.objects)", len(msg.objects))
+        print("msg.objects[0].pose.position.x ", msg.objects[0].pose.position.x)
+        print("y ", msg.objects[0].pose.position.y)
+        print("z ", msg.objects[0].pose.position.z)
+        # print("msg.objects[0].pose.orientation.x", msg.objects[0].pose.orientation.x)
+        # print("y ", msg.objects[0].pose.orientation.y)
+        # print("z ", msg.objects[0].pose.orientation.z)
+        # print("w ", msg.objects[0].pose.orientation.w)
         self.vehicleinfo_x = msg.objects[0].pose.position.x
         self.vehicleinfo_y = msg.objects[0].pose.position.y
         self.vehicleinfo_z = msg.objects[0].pose.position.z
@@ -298,8 +311,6 @@ class OnlineLaneMappingNode:
         self.vehicleinfo_b = msg.objects[0].pose.orientation.y
         self.vehicleinfo_c = msg.objects[0].pose.orientation.z
         self.vehicleinfo_d = msg.objects[0].pose.orientation.w
-        print("self.vehicleinfo_x")
-        print(self.vehicleinfo_x)
 
     def run(self):
         rospy.spin()  # 保持节点运行

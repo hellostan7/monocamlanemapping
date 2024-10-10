@@ -7,7 +7,7 @@ import open3d as o3d
 import numpy as np
 from misc.ros_utils.msg_utils import posemsg_to_np, lanemsg_to_list
 from misc.config import cfg
-from lane_slam.lane_utils import lane_denoise, prune_3d_lane_by_range, points_downsample
+from lane_slam.lane_utils import lane_denoise, prune_3d_lane_by_range, points_downsample, prune_3d_lane_by_vehiclerange
 from misc.plot_utils import visualize_points_list
 from misc.pcd_utils import transform_points, make_open3d_point_cloud
 from misc.lie_utils import inv_se3
@@ -237,12 +237,12 @@ class LaneUI:
             lane['xyz'] = xyz
             lane['visibility'] = np.ones(len(xyz))
         return lanes
-    def get_lane_in_range(self, lanes):
+    def get_lane_in_range(self, lanes, veh_pose):
         #  lane_points: [N, c]
         lanes_new = []
         for lane in lanes:
             xyz = lane['xyz']
-            xyz = prune_3d_lane_by_range(xyz, cfg.preprocess.range_area)
+            xyz = prune_3d_lane_by_vehiclerange(xyz, cfg.preprocess.range_area, veh_pose)
             lane['xyz'] = xyz
             lane['visibility'] = [1] * len(lane['xyz'])
             if len(lane['xyz']) >= 4:
