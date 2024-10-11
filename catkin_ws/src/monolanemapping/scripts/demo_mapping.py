@@ -3,6 +3,7 @@
 # @author: Zhijian Qiao
 # @email: zqiaoac@connect.ust.hk
 import numpy as np
+from scipy.spatial.transform import Rotation as R
 from tqdm import tqdm
 import os
 import sys
@@ -17,8 +18,8 @@ from misc.config import define_args
 from misc.config import cfg, cfg_from_yaml_file
 
 import rospy
-# msg_workspace_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../", "devel/lib/python3/dist-packages/"))
-# sys.path.append(msg_workspace_path)
+msg_workspace_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../", "devel/lib/python3/dist-packages/"))
+sys.path.append(msg_workspace_path)
 from derived_object_msgs.msg import ObjectArray
 from vehicle_msgs.msg import ArenaInfoStatic
 from vehicle_msgs.msg import LaneNet
@@ -123,16 +124,27 @@ class Inputlanes:
     def __init__(self):
         self.lanes_predict_msg = self.lanes_predict()
 
-    def add_lane(self, points, car_posex, car_posey, car_posez, category, track_id, attribute):
+    def add_lane(self, points, car_posex, car_posey, car_posez, orientation_x, orientation_y, orientation_z, orientation_w, category, track_id, attribute):
         lane = self.Lane(category, track_id, attribute)
         for point in points:
             #x, y ,z, visibility = point.x, point.y, point.z, 1
+            # if point.x > 30 and point.y < -200 and point.y > -220 and point.x < 100:
+            #    print(f"lane_point.x, lane_point.y, lane_point.z: {point.x, point.y, point.z}")
+            #    print(f"cam lane_point.x, lane_point.y, lane_point.z: {point.x - car_posex, point.y - car_posey, point.z - car_posez}")
+
             x = point.x - car_posex
             y = point.y - car_posey
             z = point.z - car_posez
+            target_position = np.array([x, y, z])
+            rotation_matrix = R.from_quat([orientation_x, orientation_y, orientation_z, orientation_w]).as_matrix()
+            T_wc_inv = np.linalg.inv(rotation_matrix)
+            relative_position = target_position.dot(T_wc_inv[:3, :3].T)
+            position_x = relative_position[0]
+            position_y = relative_position[1]
+            position_z = relative_position[2]
             visibility = 1
 
-            point = self.Point(x, y, z, visibility)
+            point = self.Point(position_x, position_y, position_z, visibility)
 
             lane.points.append(point)
             #lane.points[lane.num_points] = point
@@ -208,6 +220,8 @@ class OnlineLaneMappingNode:
 
         # 创建发布者
         self.publisher = rospy.Publisher('/markerarray_onlinelanemapping', MarkerArray, queue_size=10)
+        self.publisher1 = rospy.Publisher('/markerarray_onlinelanemapping_points', MarkerArray, queue_size=10)
+        self.publisher2 = rospy.Publisher('/markerarray_onlinelanemapping_text', MarkerArray, queue_size=10)
 
         # 创建订阅者
         self.subscriber1 = rospy.Subscriber('/carla/objects', ObjectArray, self.callback_DecodeEgoVehicleInfo)
@@ -229,7 +243,8 @@ class OnlineLaneMappingNode:
         
         i = 0
         for lane in msg.lane_net.lanes:
-            self.inputlanes.add_lane(lane.points, self.vehicleinfo_x, self.vehicleinfo_y, self.vehicleinfo_z, 
+            self.inputlanes.add_lane(lane.points, self.vehicleinfo_x, self.vehicleinfo_y, self.vehicleinfo_z,
+                self.vehicleinfo_a, self.vehicleinfo_b, self.vehicleinfo_c, self.vehicleinfo_d,
                 category=0, track_id=i, attribute=0)
             i += 1
 
@@ -293,6 +308,65 @@ class OnlineLaneMappingNode:
 
         # 发布修改后的消息
         self.publisher.publish(marker_array)
+
+        # publish POINTS
+        marker_array1 = MarkerArray()
+        id = 0
+        for output_single in output:
+            marker1 = Marker()
+            marker1.header.frame_id = "map"
+            marker1.header.stamp = rospy.Time.now()
+            marker1.ns = "line_namespace"
+            marker1.id = id
+            marker1.type = Marker.POINTS
+            marker1.action = Marker.ADD
+            marker1.scale.x = 0.2
+            marker1.scale.y = 0.5
+            marker1.scale.z = 0.5
+            marker1.color.a = 1.0  # Alpha
+            marker1.color.r = 0.0  # Red
+            marker1.color.g = 1.0  # Green
+            marker1.color.b = 0.0  # Blue
+            for point in output_single:
+                p = Point(float(point[0]), float(point[1]), float(point[2]))
+                marker1.points.append(p)
+
+            id = id + 1
+
+            marker_array1.markers.append(marker1)
+
+        # 发布修改后的消息
+        self.publisher1.publish(marker_array1)
+
+        # publish text
+        marker_array2 = MarkerArray()
+        id = 0
+        for output_single in output:
+            for point in output_single:
+                marker2 = Marker()
+                marker2.header.frame_id = "map"
+                marker2.header.stamp = rospy.Time.now()
+                # marker2.ns = "line_namespace"
+                marker2.id = id
+                marker2.type = Marker.TEXT_VIEW_FACING
+                # marker2.action = Marker.ADD
+                # marker2.scale.x = 0.2
+                # marker2.scale.y = 0.5
+                marker2.scale.z = 0.2
+                marker2.color.a = 1.0  # Alpha
+                marker2.color.r = 0.0  # Red
+                marker2.color.g = 0.5  # Green
+                marker2.color.b = 0.5  # Blue
+                marker2.pose.position.x = float(point[0])
+                marker2.pose.position.y = float(point[1] + 0.5)
+                marker2.pose.position.z = float(point[2])
+                marker2.text = f"({point[0]:.2f}, {point[1]:.2f})"
+                id = id + 1
+
+                marker_array2.markers.append(marker2)
+
+        # 发布修改后的消息
+        self.publisher2.publish(marker_array2)
 
     def callback_DecodeEgoVehicleInfo(self, msg):
         # rospy.loginfo("Callback for /ego_vehicle_info triggered")

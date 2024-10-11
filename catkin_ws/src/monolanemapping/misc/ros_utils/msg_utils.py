@@ -3,7 +3,8 @@ from scipy.spatial.transform import Rotation as R
 # /home/qzj/code/catkin_iros23/devel/lib/python3/dist-packages
 import os
 import sys
-sys.path.append("/home/minghao.zhu/Documents/catkin_ws/devel/lib/python3/dist-packages")
+msg_workspace_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../", "devel/lib/python3/dist-packages/"))
+sys.path.append(msg_workspace_path)
 from openlane_bag.msg import LaneList, Lane, LanePoint
 from geometry_msgs.msg import PoseStamped
 
