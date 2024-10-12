@@ -29,13 +29,14 @@ import geometry_msgs
 from visualization_msgs.msg import MarkerArray, Marker
 from geometry_msgs.msg import Point
 
-def monolanmapping_main(input, bag_file):
+def monolanmapping_main(lane_mapper, input, bag_file):
 
     result = {}
-    # initialize lane mapper
-    lane_mapper = LaneMapping(input, bag_file, save_result=False)
     # process the bag file
-    output = lane_mapper.process()
+    output = lane_mapper.process(input)
+
+    curframe_mappoints_laneassociation = lane_mapper.get_curframe_mappoints_laneassociation()
+    curframe_mappoints_odometry = lane_mapper.get_curframe_mappoints_odometry()
 
 
     # result[lane_mapper.segment] = stats
@@ -55,7 +56,7 @@ def monolanmapping_main(input, bag_file):
     #             all_stats['map_size'] = all_stats.get('map_size', []) + [value]
     # print("Map size: ", np.mean(all_stats['map_size']))
 
-    return output
+    return output, curframe_mappoints_laneassociation, curframe_mappoints_odometry
 
     sys.stdout.close()
 
@@ -215,6 +216,17 @@ class OnlineLaneMappingNode:
         self.vehicleinfo_b = 0.0
         self.vehicleinfo_c = 0.0
         self.vehicleinfo_d = 0.0
+
+        # initialize lane mapper
+        input = {
+            "lanes_predict" : [],
+            "lanes_gt" : [],
+            "gt_pose_wc" : []
+        }
+        bag_file = os.path.join(ROOT_DIR, 'examples/data/segment-14486517341017504003_3406_349_3426_349_with_camera_labels.bag')
+        
+        self.lane_mapper = LaneMapping(input, bag_file, save_result=False)
+
         # 初始化节点
         rospy.init_node('online_lane_mapping_node', anonymous=True)
 
@@ -222,6 +234,9 @@ class OnlineLaneMappingNode:
         self.publisher = rospy.Publisher('/markerarray_onlinelanemapping', MarkerArray, queue_size=10)
         self.publisher1 = rospy.Publisher('/markerarray_onlinelanemapping_points', MarkerArray, queue_size=10)
         self.publisher2 = rospy.Publisher('/markerarray_onlinelanemapping_text', MarkerArray, queue_size=10)
+        self.publisher3 = rospy.Publisher('/markerarray_onlinelanemapping_inputpoints', MarkerArray, queue_size=10)
+        self.publisher4 = rospy.Publisher('/markerarray_onlinelanemapping_laneassociation_curframepoints', MarkerArray, queue_size=10)
+        self.publisher5 = rospy.Publisher('/markerarray_onlinelanemapping_odometry_curframepoints', MarkerArray, queue_size=10)
 
         # 创建订阅者
         self.subscriber1 = rospy.Subscriber('/carla/objects', ObjectArray, self.callback_DecodeEgoVehicleInfo)
@@ -240,7 +255,7 @@ class OnlineLaneMappingNode:
 
         self.inputlanes = Inputlanes()
         self.gt_pose_msg = inputvehicle()
-        
+
         i = 0
         for lane in msg.lane_net.lanes:
             self.inputlanes.add_lane(lane.points, self.vehicleinfo_x, self.vehicleinfo_y, self.vehicleinfo_z,
@@ -263,8 +278,8 @@ class OnlineLaneMappingNode:
 
         #marker_array.markers.append(marker)
         bag_file = os.path.join(ROOT_DIR, 'examples/data/segment-14486517341017504003_3406_349_3426_349_with_camera_labels.bag')
-        output = monolanmapping_main(input, bag_file)
-
+        output, curframePoints_laneassociation, curframePoints_odometry = monolanmapping_main(self.lane_mapper, input, bag_file)
+        
         # Output Adaptor
         marker_array = MarkerArray()
 
@@ -276,11 +291,11 @@ class OnlineLaneMappingNode:
             marker = Marker()
             marker.header.frame_id = "map"
             marker.header.stamp = rospy.Time.now()
-            marker.ns = "line_namespace"
+            marker.ns = "output_line_MarkerArray"
             marker.id = id
             marker.type = Marker.LINE_STRIP
-            marker.action = Marker.ADD
-            marker.scale.x = 0.5
+            marker.action = Marker.MODIFY
+            marker.scale.x = 0.2
             marker.scale.y = 0.5
             marker.scale.z = 0.5
             marker.color.a = 1.0  # Alpha
@@ -316,10 +331,10 @@ class OnlineLaneMappingNode:
             marker1 = Marker()
             marker1.header.frame_id = "map"
             marker1.header.stamp = rospy.Time.now()
-            marker1.ns = "line_namespace"
+            marker1.ns = "output_ctrlpoints_MarkerArray"
             marker1.id = id
             marker1.type = Marker.POINTS
-            marker1.action = Marker.ADD
+            marker1.action = Marker.MODIFY
             marker1.scale.x = 0.2
             marker1.scale.y = 0.5
             marker1.scale.z = 0.5
@@ -346,10 +361,10 @@ class OnlineLaneMappingNode:
                 marker2 = Marker()
                 marker2.header.frame_id = "map"
                 marker2.header.stamp = rospy.Time.now()
-                # marker2.ns = "line_namespace"
+                marker2.ns = "output_text_MarkerArray"
                 marker2.id = id
                 marker2.type = Marker.TEXT_VIEW_FACING
-                # marker2.action = Marker.ADD
+                marker2.action = Marker.MODIFY
                 # marker2.scale.x = 0.2
                 # marker2.scale.y = 0.5
                 marker2.scale.z = 0.2
@@ -367,6 +382,92 @@ class OnlineLaneMappingNode:
 
         # 发布修改后的消息
         self.publisher2.publish(marker_array2)
+
+        # publish input lane points
+        marker_array3 = MarkerArray()
+        id = 0
+        for lane in msg.lane_net.lanes:
+            marker3 = Marker()
+            marker3.header.frame_id = "map"
+            marker3.header.stamp = rospy.Time.now()
+            marker3.ns = "input_point"
+            marker3.id = id
+            marker3.type = Marker.POINTS
+            marker3.action = Marker.MODIFY
+            marker3.scale.x = 0.2
+            marker3.scale.y = 0.5
+            marker3.scale.z = 0.5
+            marker3.color.a = 1.0  # Alpha
+            marker3.color.r = 0.0  # Red
+            marker3.color.g = 0.0  # Greendddddddd
+            marker3.color.b = 1.0  # Blue
+            for point in lane.points:
+
+                p_input = Point(point.x, point.y, point.z)
+                marker3.points.append(p_input)
+
+                id = id + 1
+
+            marker_array3.markers.append(marker3)
+
+        # 发布修改后的消息
+        self.publisher3.publish(marker_array3)
+        
+        # publish curframe lane_association points
+        marker_array4 = MarkerArray()
+        id = 0
+        for row in curframePoints_laneassociation:
+            marker4 = Marker()
+            marker4.header.frame_id = "map"
+            marker4.header.stamp = rospy.Time.now()
+            marker4.ns = "lane_association_curframepoints_MarkerArray"
+            marker4.id = id
+            marker4.type = Marker.POINTS
+            marker4.action = Marker.MODIFY
+            marker4.scale.x = 0.2
+            marker4.scale.y = 0.5
+            marker4.scale.z = 0.5
+            marker4.color.a = 1.0  # Alpha
+            marker4.color.r = 0.5  # Red
+            marker4.color.g = 0.5  # Greendddddddd
+            marker4.color.b = 0.0  # Blue
+            x,y,z = row
+            p_curframe_laneassociation = Point(x, y, z)
+            marker4.points.append(p_curframe_laneassociation)
+            id = id + 1
+
+            marker_array4.markers.append(marker4)
+
+        # 发布修改后的消息
+        self.publisher4.publish(marker_array4)
+
+        # publish curframe odometry points
+        marker_array5 = MarkerArray()
+        id = 0
+        for row in curframePoints_odometry:
+            marker5 = Marker()
+            marker5.header.frame_id = "map"
+            marker5.header.stamp = rospy.Time.now()
+            marker5.ns = "odometry_curframepoints_MarkerArray"
+            marker5.id = id
+            marker5.type = Marker.POINTS
+            marker5.action = Marker.MODIFY
+            marker5.scale.x = 0.2
+            marker5.scale.y = 0.3
+            marker5.scale.z = 0.5
+            marker5.color.a = 1.0  # Alpha
+            marker5.color.r = 0.5  # Red
+            marker5.color.g = 0.0  # Greendddddddd
+            marker5.color.b = 0.5  # Blue
+            x,y,z = row
+            p_curframe_odometry = Point(x, y, z)
+            marker5.points.append(p_curframe_odometry)
+            id = id + 1
+
+            marker_array5.markers.append(marker5)
+
+        # 发布修改后的消息
+        self.publisher5.publish(marker_array5)
 
     def callback_DecodeEgoVehicleInfo(self, msg):
         # rospy.loginfo("Callback for /ego_vehicle_info triggered")

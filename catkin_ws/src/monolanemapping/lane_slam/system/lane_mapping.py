@@ -5,6 +5,7 @@
 # @email: zqiaoac@connect.ust.hk
 from time import perf_counter
 from copy import deepcopy
+import copy
 import tqdm
 from lane_slam.system.lane_opt import LaneOptimizer
 from lane_slam.lane_utils import drop_lane_by_p
@@ -14,13 +15,15 @@ import numpy as np
 class LaneMapping(LaneOptimizer):
     def __init__(self, input, bag_file, save_result=True):
         super(LaneMapping, self).__init__(input, bag_file)
-        self.load_data()
         self.tracking_init()
         self.graph_init()
         self.debug_init()
         self.save_result = save_result
+        self.cur_frame_odometry_points = []
 
-    def process(self):
+    def process(self, input):
+        self.input_data = input
+        self.load_data()
         for frame_id, frame_data in enumerate(tqdm.tqdm(self.frames_data, leave=False, dynamic_ncols=True)):
             pose_wc = frame_data['gt_pose']
             timestamp = frame_data['timestamp']
@@ -31,6 +34,7 @@ class LaneMapping(LaneOptimizer):
             t0 = perf_counter()
             self.odometry(lane_pts_c, pose_wc, timestamp)
             self.odo_timer.update(perf_counter() - t0)
+            self.process_cur_frame_odometry_points()
 
             # 2. lane association
             t1 = perf_counter()
@@ -71,7 +75,7 @@ class LaneMapping(LaneOptimizer):
 
         ctrl_points = []
         for lane_id, lane_feature in self.lanes_in_map.items():
-            print(lane_feature)
+            #print(lane_feature)
             ctrl_pts = lane_feature.get_ctrl_xyz()
             ctrl_points.append(np.array(ctrl_pts))
 
@@ -118,3 +122,33 @@ class LaneMapping(LaneOptimizer):
         overlap_id = list(set(overlap_id))
         for lane_id in overlap_id:
             self.lanes_in_map.pop(lane_id)
+
+    def get_curframe_mappoints_laneassociation(self):
+        all_points = []
+        for lf in self.cur_frame.get_lane_features():
+            if lf.id == -1:
+                continue
+
+            lane_feature_w = self.cur_frame.transform_to_world(lf)
+            lane_feature_w.fitting()
+
+            points = lane_feature_w.get_xyzs()
+            all_points.extend(points)
+        #print("laneassociation points is ")
+        #print(all_points)
+        return all_points
+    
+    def process_cur_frame_odometry_points(self):
+        for lf in self.cur_frame.get_lane_features():
+
+            lane_feature_w = self.cur_frame.transform_to_world(lf)
+            lane_feature_w.fitting()
+
+            points = lane_feature_w.get_xyzs()
+            shallow_copied_point = copy.deepcopy(points)
+            self.cur_frame_odometry_points.extend(shallow_copied_point)
+        #print("odometry points is ")
+        #print(self.cur_frame_odometry_points)
+    
+    def get_curframe_mappoints_odometry(self):
+        return self.cur_frame_odometry_points
