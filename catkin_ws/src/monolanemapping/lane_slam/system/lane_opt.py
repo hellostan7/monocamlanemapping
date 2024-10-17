@@ -7,6 +7,7 @@ import open3d as o3d
 import numpy as np
 from functools import partial
 import gtsam
+import rospy
 from gtsam.symbol_shorthand import L, X
 from misc.config import cfg
 from misc.lie_utils import inv_se3, so3_to_rotvec, rad2deg, se3_to_euler_xyz, make_noisy_pose2d, rot_to_angle, se3_log
@@ -63,7 +64,16 @@ class LaneOptimizer(LaneTracker):
         self.graph = gtsam.NonlinearFactorGraph()
         self.initial_estimate = gtsam.Values()
         self.lane_meas = []
+        current_time = rospy.get_rostime() 
+        # 将时间转换为毫秒
+        total_milliseconds = current_time.to_nsec() // 1000000  # 将纳秒转换为毫秒
 
+        # 将总毫秒数转换为分钟、秒和毫秒
+        minutes = total_milliseconds // 60000
+        seconds = (total_milliseconds // 1000) % 60
+        milliseconds = total_milliseconds % 1000
+
+        print("Current ROS time 2 : {} minutes {} seconds {} milliseconds".format(minutes, seconds, milliseconds))
         if not cfg.lane_mapping.init_after_opt:
             self.create_new_lane()
 

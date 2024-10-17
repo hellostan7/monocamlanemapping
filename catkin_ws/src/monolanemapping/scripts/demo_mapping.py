@@ -5,6 +5,7 @@
 import numpy as np
 from scipy.spatial.transform import Rotation as R
 from tqdm import tqdm
+from copy import deepcopy
 import os
 import sys
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
@@ -32,6 +33,16 @@ from geometry_msgs.msg import Point
 def monolanmapping_main(lane_mapper, input, bag_file):
 
     result = {}
+    current_time = rospy.get_rostime()
+    # 将时间转换为毫秒
+    total_milliseconds = current_time.to_nsec() // 1000000  # 将纳秒转换为毫秒
+
+    # 将总毫秒数转换为分钟、秒和毫秒
+    minutes = total_milliseconds // 60000
+    seconds = (total_milliseconds // 1000) % 60
+    milliseconds = total_milliseconds % 1000
+
+    print("Current ROS time 1 : {} minutes {} seconds {} milliseconds".format(minutes, seconds, milliseconds))
     # process the bag file
     output = lane_mapper.process(input)
 
@@ -132,18 +143,48 @@ class Inputlanes:
             # if point.x > 30 and point.y < -200 and point.y > -220 and point.x < 100:
             #    print(f"lane_point.x, lane_point.y, lane_point.z: {point.x, point.y, point.z}")
             #    print(f"cam lane_point.x, lane_point.y, lane_point.z: {point.x - car_posex, point.y - car_posey, point.z - car_posez}")
-
+            if point.x > 10 and point.y < 10 and point.y > -10 and point.x < 40:
+                print("'1")
             x = point.x - car_posex
             y = point.y - car_posey
             z = point.z - car_posez
             target_position = np.array([x, y, z])
             rotation_matrix = R.from_quat([orientation_x, orientation_y, orientation_z, orientation_w]).as_matrix()
-            T_wc_inv = np.linalg.inv(rotation_matrix)
-            relative_position = target_position.dot(T_wc_inv[:3, :3].T)
+            # T_wc_inv = np.linalg.inv(rotation_matrix)
+            # relative_position = target_position.dot(T_wc_inv[:3, :3].T)
+            relative_position = target_position.dot(rotation_matrix[:3, :3])
+            #relative_position = rotation_matrix[:3, :3].dot(target_position)
             position_x = relative_position[0]
             position_y = relative_position[1]
             position_z = relative_position[2]
+            # pose = np.eye(4)
+            # pose[:3, 3] = np.array([car_posex, car_posey, car_posez])
+            # pose[:3, :3] = R.from_quat([orientation_x, orientation_y, orientation_z, orientation_w]).as_matrix()
+
+            # # 计算逆旋转矩阵 
+            # inv_rotation = pose[:3, :3].T 
+            # # 计算逆平移向量 
+            # inv_translation = np.dot(inv_rotation, pose[:3, 3])
+            # # 构造逆变换矩阵 
+            # inv_pose = np.eye(4) 
+            # inv_pose[:3, :3] = inv_rotation 
+            # inv_pose[:3, 3] = inv_translation 
+            # # 将世界坐标系下的点转换为局部坐标系下 
+            # world_pts = np.array([point.x, point.y, point.z])
+            # local_pts = (world_pts - inv_pose[:3, 3].reshape(1, 3)) #@ inv_pose[:3, :3].T
+            # position_x = local_pts[0,0]
+            # position_y = local_pts[0,1]
+            # position_z = local_pts[0,2]
+
+
             visibility = 1
+
+            if position_x > 100 or position_x < -30 or position_y > 20 or position_y < -20:
+                
+                #print("position")
+                #print(np.array([position_x, position_y, position_z]))
+                continue
+
 
             point = self.Point(position_x, position_y, position_z, visibility)
 
@@ -151,8 +192,9 @@ class Inputlanes:
             #lane.points[lane.num_points] = point
             lane.num_points += 1
         #self.lanes_predict_msg.lane_list.lane_list[self.lanes_predict_msg.num_lanes] = lane
-        self.lanes_predict_msg.lane_list[self.lanes_predict_msg.num_lanes] = lane
-        self.lanes_predict_msg.num_lanes += 1
+        if len(lane.points) > 0:
+            self.lanes_predict_msg.lane_list[self.lanes_predict_msg.num_lanes] = lane
+            self.lanes_predict_msg.num_lanes += 1
 
     def get_lanes_predict_msg(self):
         return self.lanes_predict_msg
@@ -237,6 +279,7 @@ class OnlineLaneMappingNode:
         self.publisher3 = rospy.Publisher('/markerarray_onlinelanemapping_inputpoints', MarkerArray, queue_size=10)
         self.publisher4 = rospy.Publisher('/markerarray_onlinelanemapping_laneassociation_curframepoints', MarkerArray, queue_size=10)
         self.publisher5 = rospy.Publisher('/markerarray_onlinelanemapping_odometry_curframepoints', MarkerArray, queue_size=10)
+        self.publisher6 = rospy.Publisher('/markerarray_onlinelanemapping_111', MarkerArray, queue_size=10)
 
         # 创建订阅者
         self.subscriber1 = rospy.Subscriber('/carla/objects', ObjectArray, self.callback_DecodeEgoVehicleInfo)
@@ -255,18 +298,25 @@ class OnlineLaneMappingNode:
 
         self.inputlanes = Inputlanes()
         self.gt_pose_msg = inputvehicle()
-
         i = 0
+        vehicleinfo_x = deepcopy(self.vehicleinfo_x)
+        vehicleinfo_y = deepcopy(self.vehicleinfo_y)
+        vehicleinfo_z = deepcopy(self.vehicleinfo_z)
+        vehicleinfo_a = deepcopy(self.vehicleinfo_a)
+        vehicleinfo_b = deepcopy(self.vehicleinfo_b)
+        vehicleinfo_c = deepcopy(self.vehicleinfo_c)
+        vehicleinfo_d = deepcopy(self.vehicleinfo_d)
+
         for lane in msg.lane_net.lanes:
-            self.inputlanes.add_lane(lane.points, self.vehicleinfo_x, self.vehicleinfo_y, self.vehicleinfo_z,
-                self.vehicleinfo_a, self.vehicleinfo_b, self.vehicleinfo_c, self.vehicleinfo_d,
+            self.inputlanes.add_lane(lane.points, vehicleinfo_x, vehicleinfo_y, vehicleinfo_z,
+                vehicleinfo_a, vehicleinfo_b, vehicleinfo_c, vehicleinfo_d,
                 category=0, track_id=i, attribute=0)
             i += 1
 
         self.inputlanes.add_header(123, 0)
         self.gt_pose_msg.add_header(123, 0)
-        self.gt_pose_msg.add_pose(self.vehicleinfo_x, self.vehicleinfo_y, self.vehicleinfo_z, 
-            self.vehicleinfo_a, self.vehicleinfo_b, self.vehicleinfo_c, self.vehicleinfo_d)                   
+        self.gt_pose_msg.add_pose(vehicleinfo_x, vehicleinfo_y, vehicleinfo_z, 
+            vehicleinfo_a, vehicleinfo_b, vehicleinfo_c, vehicleinfo_d)                   
         
         Lanes_predict = self.inputlanes.get_lanes_predict_msg()
         Gt_pose_wc = self.gt_pose_msg.get_gt_pose_msg()
@@ -275,6 +325,43 @@ class OnlineLaneMappingNode:
         input["lanes_predict"].append(Lanes_predict)
         input["lanes_gt"].append(Lanes_predict)
         input["gt_pose_wc"].append(Gt_pose_wc)
+
+        lanelist = []
+        lanepoints = []
+
+        pose = np.eye(4)
+        pose[:3, 3] = np.array([vehicleinfo_x, vehicleinfo_y, vehicleinfo_z])
+        pose[:3, :3] = R.from_quat([vehicleinfo_a, vehicleinfo_b, vehicleinfo_c, vehicleinfo_d]).as_matrix()
+
+        # for lane_id in range(Lanes_predict.num_lanes):
+        #     lane = Lanes_predict.lane_list[lane_id]
+        #     for lane_point_id in range(lane.num_points):
+        #         lane_point = lane.points[lane_point_id]
+        #         lanepoints.append([lane_point.x, lane_point.y, lane_point.z])
+        #     lanelist.append(lanepoints)
+
+        for lane_id in range(Lanes_predict.num_lanes):
+            lane = Lanes_predict.lane_list[lane_id]
+            lanepoints = []
+            for lane_point_id in range(lane.num_points):
+                lane_point = lane.points[lane_point_id]
+                lanepoints.append([lane_point.x, lane_point.y, lane_point.z])
+            lanelist.append(lanepoints.copy()) 
+
+        lanelist_out = []
+        for lane in lanelist:
+            lane_arr = np.array(lane)
+            lane_pts_w = []
+            lane_pts_w = lane_arr[:,:3] @ pose[:3, :3].T + pose[:3, 3].reshape(1, 3)
+            #lane_pts_w = np.concatenate([lane_pts_w, lane_arr[:, 3:]], axis=1)
+            lanelist_out.append(lane_pts_w)
+
+        # lanelist_out = []
+        # lane_pts_w = []
+        # for lane in lanelist:
+        #     lane_pts_w = lane[:,:3] @ pose[:3, :3].T + pose[:3, 3].reshape(1, 3)
+        #     lane_pts_w = np.concatenate([lane_pts_w, lane[:, 3:]], axis=1)
+        #     lanelist_out.append(lane_pts_w)
 
         #marker_array.markers.append(marker)
         bag_file = os.path.join(ROOT_DIR, 'examples/data/segment-14486517341017504003_3406_349_3426_349_with_camera_labels.bag')
@@ -444,6 +531,9 @@ class OnlineLaneMappingNode:
         # publish curframe odometry points
         marker_array5 = MarkerArray()
         id = 0
+        point1 = []
+        p_curframe_odometry = []
+        distance_threshold = 2
         for row in curframePoints_odometry:
             marker5 = Marker()
             marker5.header.frame_id = "map"
@@ -460,14 +550,50 @@ class OnlineLaneMappingNode:
             marker5.color.g = 0.0  # Greendddddddd
             marker5.color.b = 0.5  # Blue
             x,y,z = row
-            p_curframe_odometry = Point(x, y, z)
-            marker5.points.append(p_curframe_odometry)
-            id = id + 1
+            point1 = Point(x, y, z)
+            if not p_curframe_odometry:
+                distance = distance_threshold
+            else:
+                distance = np.linalg.norm(np.array([p_curframe_odometry.x, p_curframe_odometry.y, p_curframe_odometry.z]) - np.array([point1.x, point1.y, point1.z]))
+            if distance >= distance_threshold:
+                
+                p_curframe_odometry = Point(x, y, z)
+                marker5.points.append(p_curframe_odometry)
+                id = id + 1
 
-            marker_array5.markers.append(marker5)
+                marker_array5.markers.append(marker5)
 
         # 发布修改后的消息
         self.publisher5.publish(marker_array5)
+
+        # publish curframe lane_association points
+        marker_array6 = MarkerArray()
+        id = 0
+        for lanelist in lanelist_out:
+            for row in lanelist:
+                marker6 = Marker()
+                marker6.header.frame_id = "map"
+                marker6.header.stamp = rospy.Time.now()
+                marker6.ns = "lane_association_curframepoints_MarkerArray"
+                marker6.id = id
+                marker6.type = Marker.POINTS
+                marker6.action = Marker.MODIFY
+                marker6.scale.x = 0.2
+                marker6.scale.y = 0.5
+                marker6.scale.z = 0.5
+                marker6.color.a = 1.0  # Alpha
+                marker6.color.r = 0.5  # Red
+                marker6.color.g = 0.5  # Greendddddddd
+                marker6.color.b = 0.0  # Blue
+                x,y,z = row
+                p_111 = Point(x, y, z)
+                marker6.points.append(p_111)
+                id = id + 1
+
+                marker_array6.markers.append(marker6)
+
+        # 发布修改后的消息
+        self.publisher6.publish(marker_array6)
 
     def callback_DecodeEgoVehicleInfo(self, msg):
         # rospy.loginfo("Callback for /ego_vehicle_info triggered")

@@ -33,7 +33,7 @@ pose_update:
 
 lane_mapping:
     window_size: 10
-    ctrl_points_chord: 3.0
+    ctrl_points_chord: 1.0
     ctrl_noise: [0.5, 0.5, 0.5] # [x, y, z] in m
     lane_meas_noise: [0.1, 1.0] # [lower_bound, upper_bound] in m, this hyperparameter does not affect the result
     lane_sample_num: 5 # number of samples every two knots

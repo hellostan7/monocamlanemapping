@@ -3,6 +3,7 @@
 import os
 import sys
 import rospy
+import math
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
 sys.path.append(ROOT_DIR)
 msg_workspace_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../", "devel/lib/python3/dist-packages/"))
@@ -20,6 +21,7 @@ class FakeOnlineLaneMappingInput:
         self.pub1 = rospy.Publisher('arena_info_static', ArenaInfoStatic, queue_size=10)
         self.pub2 = rospy.Publisher('/carla/objects', ObjectArray, queue_size=10)
         self.rate = rospy.Rate(10)  # 10 Hz
+        self.y = -100
 
     def run(self):
         # 创建并发布静态场地信息消息
@@ -37,13 +39,13 @@ class FakeOnlineLaneMappingInput:
 
         # 设置起始点和结束点
         start_point = geometry_msgs.msg.Point()
-        start_point.x = 0
-        start_point.y = 0
+        start_point.x = -50
+        start_point.y = 10
         start_point.z = 0
 
         final_point = geometry_msgs.msg.Point()
-        final_point.x = 100
-        final_point.y = 0
+        final_point.x = 50
+        final_point.y = 10
         final_point.z = 0
 
         # 设置起始点和结束点
@@ -51,7 +53,7 @@ class FakeOnlineLaneMappingInput:
         lane.final_point = final_point
 
         # 插值点
-        num_points = 100  # 插值点数量
+        num_points = 10  # 插值点数量
         lane.points = []
 
         # 生成插值点
@@ -71,9 +73,9 @@ class FakeOnlineLaneMappingInput:
 
         # 创建一个 Object 实例并设置其位置
         obj = Object()
-        obj.pose.position.x = 1
-        obj.pose.position.y = 2
-        obj.pose.position.z = 3
+        obj.pose.position.x = 0
+        obj.pose.position.y = 0
+        obj.pose.position.z = 0
         obj.pose.orientation.x = 0.0
         obj.pose.orientation.y = 0.0
         obj.pose.orientation.z = 0.0
@@ -83,6 +85,9 @@ class FakeOnlineLaneMappingInput:
             
         while not rospy.is_shutdown():
             self.pub1.publish(arena_info_static)
+            Objects_Array.objects[0].pose.position.y += 2
+            if Objects_Array.objects[0].pose.position.y > 100:
+                Objects_Array.objects[0].pose.position.y = -100
             self.pub2.publish(Objects_Array)
         
 
